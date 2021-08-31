@@ -1,0 +1,3 @@
+node_modules/
+install-linters.sh
+runlinters.sh
