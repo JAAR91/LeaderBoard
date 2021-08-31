@@ -1,0 +1,30 @@
+@font-face {
+  font-family: myComicSans;
+  src: url('./comic-sans.ttf');
+}
+
+body {
+    font-family: myComicSans;
+}
+
+.scores {
+  border: 2px solid black;
+  list-style: none;
+  padding: 0;
+  box-shadow: 3px 3px 5px 0 black;
+}
+
+.scores li:nth-child(odd) {
+  background: rgb(201, 201, 201);
+}
+
+button {
+  background-color: white;
+  border: 2px solid black;
+  box-shadow: 3px 3px 5px 0 black;
+  height: 40px;
+}
+
+input {
+  border: 2px solid black;
+}
