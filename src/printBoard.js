@@ -1,10 +1,9 @@
 import Row from './domloader.js';
 import myLeaderBoard from './loadBoard.js';
-
-myLeaderBoard.default();
+import getScores from './getScores.js';
 
 const leaderBoarContainer = document.createElement('div');
-leaderBoarContainer.classList.add('col-6');
+leaderBoarContainer.classList.add('col-6', 'order-1');
 
 const printBoard = () => {
   leaderBoarContainer.innerHTML = '';
@@ -20,6 +19,9 @@ const printBoard = () => {
 
   const refresBtn = document.createElement('button');
   refresBtn.textContent = 'Refresh';
+  refresBtn.addEventListener('click', () => {
+    getScores();
+  });
   titleContainer.appendChild(refresBtn);
 
   const Board = document.createElement('ul');
@@ -28,7 +30,7 @@ const printBoard = () => {
 
   myLeaderBoard.list.forEach((user) => {
     const score = document.createElement('li');
-    score.innerHTML = `<p class="p-2 m-0"> ${user.name}: ${user.score} </p>`;
+    score.innerHTML = `<p class="p-2 m-0"> ${user.user}: ${user.score} </p>`;
     Board.append(score);
   });
 

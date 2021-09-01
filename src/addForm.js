@@ -2,7 +2,7 @@ import Row from './domloader.js';
 
 const printForm = () => {
   const formContainer = document.createElement('div');
-  formContainer.classList.add('col-6', 'p-3', 'd-flex', 'flex-column');
+  formContainer.classList.add('col-6', 'p-3', 'd-flex', 'flex-column', 'order-2');
 
   const labelTitle = document.createElement('h2');
   labelTitle.classList.add('my-3');
