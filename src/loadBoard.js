@@ -1,5 +1,3 @@
-import printBoard from "./printBoard.js";
-
 class LeaderBoard {
   constructor() {
     this.list = [];
@@ -9,10 +7,9 @@ class LeaderBoard {
     this.list.push({ user, score });
   }
 
-  loadScores(ApiScores){
-    if(ApiScores !== null){
+  loadScores(ApiScores) {
+    if (ApiScores !== null) {
       this.list = ApiScores;
-      printBoard();
     }
   }
 }

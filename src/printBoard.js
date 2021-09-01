@@ -20,7 +20,7 @@ const printBoard = () => {
   const refresBtn = document.createElement('button');
   refresBtn.textContent = 'Refresh';
   refresBtn.addEventListener('click', () => {
-    getScores();
+    getScores(printBoard);
   });
   titleContainer.appendChild(refresBtn);
 

@@ -1,5 +1,5 @@
-import Row from './domloader.js';
-import {newUserScore} from './APIhandler.js';
+import Row, { imgLoading } from './domloader.js';
+import { newUserScore } from './APIhandler.js';
 
 const printForm = () => {
   const formContainer = document.createElement('div');
@@ -27,6 +27,8 @@ const printForm = () => {
   formContainer.appendChild(submitBtn);
 
   submitBtn.addEventListener('click', () => {
+    imgLoading.classList.remove('d-none');
+    submitBtn.disabled = true;
     newUserScore(nameInp.value, scoreInp.value);
     nameInp.value = '';
     scoreInp.value = '';
@@ -34,9 +36,9 @@ const printForm = () => {
 
   formContainer.querySelectorAll('input').forEach((inputItem) => {
     inputItem.addEventListener('input', () => {
-      if (nameInp.value !== '' && scoreInp.value !== ''){
+      if (nameInp.value !== '' && scoreInp.value !== '') {
         submitBtn.disabled = false;
-      }else {
+      } else {
         submitBtn.disabled = true;
       }
     });
