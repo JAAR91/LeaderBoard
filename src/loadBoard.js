@@ -8,13 +8,13 @@ class LeaderBoard {
   }
 
   default() {
-    this.list.push(this.new('name', 100));
-    this.list.push(this.new('name', 20));
-    this.list.push(this.new('name', 50));
-    this.list.push(this.new('name', 78));
-    this.list.push(this.new('name', 125));
-    this.list.push(this.new('name', 77));
-    this.list.push(this.new('name', 42));
+    this.new('name', 100);
+    this.new('name', 20);
+    this.new('name', 50);
+    this.new('name', 78);
+    this.new('name', 125);
+    this.new('name', 77);
+    this.new('name', 42);
   }
 }
 
