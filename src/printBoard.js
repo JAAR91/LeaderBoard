@@ -28,7 +28,6 @@ const printBoard = () => {
 
   myLeaderBoard.list.forEach((user) => {
     const score = document.createElement('li');
-    // console.log(myLeaderBoard.list);
     score.innerHTML = `<p class="p-2 m-0"> ${user.name}: ${user.score} </p>`;
     Board.append(score);
   });
