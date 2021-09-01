@@ -1,4 +1,5 @@
 import Row from './domloader.js';
+import {newUserScore} from './APIhandler.js';
 
 const printForm = () => {
   const formContainer = document.createElement('div');
@@ -20,9 +21,26 @@ const printForm = () => {
   formContainer.appendChild(scoreInp);
 
   const submitBtn = document.createElement('button');
+  submitBtn.disabled = true;
   submitBtn.classList.add('my-3');
   submitBtn.textContent = 'Submit';
   formContainer.appendChild(submitBtn);
+
+  submitBtn.addEventListener('click', () => {
+    newUserScore(nameInp.value, scoreInp.value);
+    nameInp.value = '';
+    scoreInp.value = '';
+  });
+
+  formContainer.querySelectorAll('input').forEach((inputItem) => {
+    inputItem.addEventListener('input', () => {
+      if (nameInp.value !== '' && scoreInp.value !== ''){
+        submitBtn.disabled = false;
+      }else {
+        submitBtn.disabled = true;
+      }
+    });
+  });
 
   Row.appendChild(formContainer);
 };

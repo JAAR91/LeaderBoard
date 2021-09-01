@@ -1,6 +1,6 @@
 import Row from './domloader.js';
 import myLeaderBoard from './loadBoard.js';
-import getScores from './getScores.js';
+import getScores from './APIhandler.js';
 
 const leaderBoarContainer = document.createElement('div');
 leaderBoarContainer.classList.add('col-6', 'order-1');
