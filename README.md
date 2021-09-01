@@ -3,7 +3,7 @@
 A board that will print user and its scores using a API service to get the users and add the users.
 
 ## Live Server
-- No live version due to api key sucurity
+- [Live version](https://jaar91.github.io/LeaderBoard/)
 
 ## Built With
 
