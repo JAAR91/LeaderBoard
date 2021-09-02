@@ -20,11 +20,10 @@ export const newUserScore = async (user, score) => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ user, score }),
-    }).then(()=>{ 
+    }).then(() => {
       imgLoading.classList.add('d-none');
       getScores();
     });
-    
   } catch {
     imgLoading.classList.add('d-none');
   }
