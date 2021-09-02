@@ -25,7 +25,7 @@ gameId();
 That is going to return a the game id to the bottom of the page:
 ![screenshot](./Resources/codeID.png)
 
-Copy the code to APIhandler.js, on line 4.
+Copy the code to APIhandler.js, on line 4 and remove the lines you just added to the index.js
 
 ## Run Project
 
