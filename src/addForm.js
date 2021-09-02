@@ -16,6 +16,7 @@ const printForm = () => {
   formContainer.appendChild(nameInp);
 
   const scoreInp = document.createElement('input');
+  scoreInp.type = 'number';
   scoreInp.classList.add('my-3');
   scoreInp.placeholder = 'Your score';
   formContainer.appendChild(scoreInp);
