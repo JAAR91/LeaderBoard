@@ -9,3 +9,10 @@ install-linters.sh
 .hintrc
 .stylelintrc.json
 deployment.sh
+node_modules
+commit.sh
+runlinters.sh
+install-linters.sh
+.eslintrc.json
+.hintrc
+.stylelintrc.json

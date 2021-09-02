@@ -1,10 +1,14 @@
 import myLeaderBoard from './loadBoard.js';
 import { imgLoading } from './domloader.js';
 
+const apiKey = '2spORCw4PiChQUoN9xtd';
+
 const getScores = async (printBoard) => {
   try {
-    await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/t5YbFcPNHxu7yajc9aCU/scores/', { mode: 'cors', method: 'GET' })
-    .then((response) => response.json()).then((data) => myLeaderBoard.loadScores(data.result)).then(() => printBoard());
+    await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${apiKey}/scores/`, { mode: 'cors', method: 'GET' })
+      .then((response) => response.json())
+      .then((data) => myLeaderBoard.loadScores(data.result))
+      .then(() => printBoard());
   } catch (err) {
     myLeaderBoard.loadScores(null);
   }
@@ -13,7 +17,7 @@ const getScores = async (printBoard) => {
 export const newUserScore = async (user, score) => {
   try {
     imgLoading.classList.remove('d-none');
-    await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/t5YbFcPNHxu7yajc9aCU/scores/', {
+    await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${apiKey}/scores/`, {
       mode: 'cors',
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
