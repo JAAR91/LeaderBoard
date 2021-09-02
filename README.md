@@ -12,7 +12,22 @@ A board that will print user and its scores using a API service to get the users
 - JavaScript
 - BootStrap
 
-## Getting Started
+## How to get API key
+
+To get the api, add the follow code to the index.js:
+```
+import gameId from './gameId.js';
+```
+Then call the function gameId at the end on index.js:
+```
+gameId();
+```
+That is going to return a the game id to the bottom of the page:
+![screenshot](./Resources/codeID.png)
+
+Copy the code to APIhandler.js, on line 4 and remove the lines you just added to the index.js
+
+## Run Project
 
 To get a local copy of the repository please run the following commands on your terminal:
 
@@ -22,17 +37,6 @@ $ git clone git@github.com:JAAR91/LeaderBoard.git
 $ cd LeaderBoard
 ```
 
-Now set up webpack using the command:
-```
-$ npm install
-```
-
-To run the project just type the command:
-```
-$ npm start
-```
-
-## Run Project
 First you need to install all  the dependencies requiered, so use:
 ```
 npm install

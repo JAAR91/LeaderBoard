@@ -1,4 +1,4 @@
-const container = document.getElementById('container');
+export const container = document.getElementById('container');
 container.classList.add('d-flex', 'flex-column', 'align-items-center');
 container.classList.add('container');
 

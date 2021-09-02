@@ -1,4 +1,4 @@
-import Row, { imgLoading } from './domloader.js';
+import Row from './domloader.js';
 import { newUserScore } from './APIhandler.js';
 
 const printForm = () => {
@@ -16,6 +16,7 @@ const printForm = () => {
   formContainer.appendChild(nameInp);
 
   const scoreInp = document.createElement('input');
+  scoreInp.type = 'number';
   scoreInp.classList.add('my-3');
   scoreInp.placeholder = 'Your score';
   formContainer.appendChild(scoreInp);
@@ -27,7 +28,6 @@ const printForm = () => {
   formContainer.appendChild(submitBtn);
 
   submitBtn.addEventListener('click', () => {
-    imgLoading.classList.remove('d-none');
     submitBtn.disabled = true;
     newUserScore(nameInp.value, scoreInp.value);
     nameInp.value = '';
