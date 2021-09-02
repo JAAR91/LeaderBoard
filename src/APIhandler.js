@@ -14,14 +14,17 @@ const getScores = async (printBoard) => {
 
 export const newUserScore = async (user, score) => {
   try {
+    imgLoading.classList.remove('d-none');
     fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/t5YbFcPNHxu7yajc9aCU/scores/', {
       mode: 'cors',
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ user, score }),
+    }).then(()=>{ 
+      imgLoading.classList.add('d-none');
+      getScores();
     });
-    getScores();
-    imgLoading.classList.add('d-none');
+    
   } catch {
     imgLoading.classList.add('d-none');
   }
